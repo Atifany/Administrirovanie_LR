@@ -1,17 +1,15 @@
 # Администрирование
 
-Для сборки контейнера nginx:<br>
-```docker build -t admin_lr3 .```
-Для запуска контейнера:<br>
-```
-docker run -d --name admin_lr3 -p 8080:80 \
-  -v "$(pwd)/html:/usr/share/nginx/html:ro" \
-  admin_lr3
-```
+Для сборки и запуска контейнера nginx:<br>
+```docker compose up -d --build```
 Для остановки контейнера:<br>
-```docker stop admin_lr3```
+```docker compose down```
 Для удаления контейнера:<br>
-```docker rm admin_lr3```
+```docker compose down --rmi all```
+
+Для проверки через терминал:<br>
+```curl -s http://localhost:8080/```
+```curl -s http://localhost:8080/hello.php```
 
 Страница nginx доступна по адресу 
 ```http://localhost:8080```
