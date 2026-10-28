@@ -4,7 +4,7 @@ services:
     image: admin_lr3
     container_name: admin_lr3
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./html:/usr/share/nginx/html:ro
     depends_on:

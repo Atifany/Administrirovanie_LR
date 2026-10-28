@@ -8,9 +8,11 @@
 ```docker compose down --rmi all```
 
 Для проверки через терминал:<br>
-```curl -s http://localhost:8080/```
-```curl -s http://localhost:8080/hello.php```
+```curl -s http://localhost:8081/```
+```curl -s http://localhost:8081/hello.php```
 
 Страница nginx доступна по адресу 
-```http://localhost:8080```
+```http://localhost:8081```
+
+Для проверки в burp необходимо открыть встроенный браузер. После запроса, если выключить intercept, в вкладке http history будет отображен запрос к серверу.
 
