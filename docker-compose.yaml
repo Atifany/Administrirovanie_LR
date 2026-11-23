@@ -6,6 +6,7 @@ services:
     ports:
       - "8081:80"
     volumes:
+      - ./nginx/.htpasswd:/etc/nginx/.htpasswd:ro
       - ./html:/usr/share/nginx/html:ro
     depends_on:
       - php
